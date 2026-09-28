@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Rodes Signage</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <main id="signage" aria-label="Produktpræsentation">
+    <section id="product-grid" class="product-grid" aria-live="polite"></section>
+    <div id="scene-dimmer" class="scene-dimmer" aria-hidden="true"></div>
+    <section id="detail-overlay" class="detail-overlay" aria-hidden="true">
+      <div id="detail-product" class="detail-product"></div>
+      <div id="detail-copy" class="detail-copy">
+        <h1 id="detail-title"></h1>
+        <p id="detail-price"></p>
+      </div>
+    </section>
+    <div id="status" class="status" role="status"></div>
+    <img id="brand-logo" class="brand-logo" alt="Rodes" hidden>
+  </main>
+  <script type="module" src="src/app.js"></script>
+</body>
+</html>

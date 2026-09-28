@@ -1,0 +1,9 @@
+# Local editor and operating-system files
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+
+# Temporary preview/export files
+reference-previews/
+

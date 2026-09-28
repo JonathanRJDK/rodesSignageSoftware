@@ -1,0 +1,52 @@
+{
+  "display": {
+    "backgroundColor": "#4f8e91",
+    "accentColor": "#ffffff",
+    "textColor": "#ffffff"
+  },
+  "branding": {
+    "logo": "assets/branding/rodes-logo.png",
+    "showLogo": true,
+    "logoPosition": "bottom-right"
+  },
+  "grid": {
+    "columns": 5,
+    "gapX": 34,
+    "gapY": 22,
+    "cardAspectRatio": 1.55
+  },
+  "animation": {
+    "overviewInitialDurationMs": 2200,
+    "betweenProductsDurationMs": 900,
+    "transitionInDurationMs": 750,
+    "detailDurationMs": 2800,
+    "transitionOutDurationMs": 750,
+    "backgroundOpacityDuringDetail": 0.38,
+    "detailWidthPercent": 58
+  },
+  "price": {
+    "displayMode": "card",
+    "defaultPrice": "99 kr.-"
+  },
+  "promo": {
+    "enabled": true,
+    "title": "KONTAKTLINSER",
+    "subtitle": "Frit valg kun",
+    "price": "99 kr.-"
+  },
+  "products": [
+    { "id": "black-witch", "name": "Black Witch", "price": "99 kr.-", "image": "assets/products/black-witch.jpg", "enabled": true },
+    { "id": "angelic-yellow", "name": "Angelic Yellow", "price": "99 kr.-", "image": "assets/products/angelic-yellow.jpg", "enabled": true },
+    { "id": "black-cat", "name": "Black Cat", "price": "99 kr.-", "image": "assets/products/black-cat.jpg", "enabled": true },
+    { "id": "white-zombie", "name": "White Zombie", "price": "99 kr.-", "image": "assets/products/white-zombie.jpg", "enabled": true },
+    { "id": "spider", "name": "Spider", "price": "99 kr.-", "image": "assets/products/spider.jpg", "enabled": true },
+    { "id": "sharingu-cataclysm", "name": "Sharingu Cataclysm", "price": "99 kr.-", "image": "assets/products/sharingu-cataclysm.jpg", "enabled": true },
+    { "id": "red-devil", "name": "Red Devil", "price": "99 kr.-", "image": "assets/products/red-devil.jpg", "enabled": true },
+    { "id": "metatron", "name": "Metatron", "price": "99 kr.-", "image": "assets/products/metatron.jpg", "enabled": true },
+    { "id": "ice-blue", "name": "Ice Blue", "price": "99 kr.-", "image": "assets/products/ice-blue.jpg", "enabled": true },
+    { "id": "hellraiser", "name": "Hellraiser", "price": "99 kr.-", "image": "assets/products/hellraiser.jpg", "enabled": true },
+    { "id": "angel", "name": "Angel", "price": "99 kr.-", "image": "assets/products/angel.jpg", "enabled": true },
+    { "id": "blind-white", "name": "Blind White", "price": "99 kr.-", "image": "assets/products/blind-white.jpg", "enabled": true },
+    { "id": "bloodshot", "name": "Bloodshot", "price": "99 kr.-", "image": "assets/products/bloodshot.jpg", "enabled": true }
+  ]
+}
