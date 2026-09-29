@@ -1,32 +1,36 @@
-:root { --background: #4f8e91; --accent: #fff; --text: #fff; --card-radius: 20px; --dim-opacity: .38; }
+@font-face { font-family: Montserrat; src: url("../assets/fonts/Montserrat-Regular.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: Montserrat; src: url("../assets/fonts/Montserrat-Light.ttf") format("truetype"); font-weight: 300; }
+@font-face { font-family: Montserrat; src: url("../assets/fonts/Montserrat-Bold.ttf") format("truetype"); font-weight: 700; }
+@font-face { font-family: Anton; src: url("../assets/fonts/Anton-Regular.ttf") format("truetype"); font-weight: 400; }
+:root { --background: #4f8e91; --accent: #fff; --text: #fff; --card-radius: 18px; --dim-opacity: .38; }
 * { box-sizing: border-box; }
 html, body { margin: 0; width: 100%; height: 100%; overflow: hidden; background: var(--background); }
-body { color: var(--text); font-family: "Arial Narrow", Arial, sans-serif; user-select: none; }
-#signage { position: relative; width: 100vw; height: 100vh; min-height: 540px; padding: 5.8vh 5vw 7vh; overflow: hidden; isolation: isolate; background: var(--background); }
-#signage::before, #signage::after { position: absolute; z-index: 0; left: -5vw; width: 110vw; height: 6.5vh; background: #fff; content: ""; }
-#signage::before { top: -3.8vh; transform: rotate(-1.8deg); }
-#signage::after { bottom: -3.8vh; transform: rotate(-1.8deg); }
+body { color: var(--text); font-family: Montserrat, sans-serif; user-select: none; }
+#signage { position: relative; width: 100vw; height: 100vh; min-height: 540px; padding: 7.4vh 5vw 8.4vh; overflow: hidden; isolation: isolate; background-color: var(--background); }
+#signage::before, #signage::after { position: absolute; z-index: 0; inset: 0; background: #fff; pointer-events: none; content: ""; }
+#signage::before { clip-path: polygon(0 0, 100% 0, 0 6%); }
+#signage::after { clip-path: polygon(0 99.5%, 100% 88%, 100% 100%, 0 100%); }
 .product-grid { position: relative; z-index: 10; display: grid; grid-template-columns: repeat(var(--columns), minmax(0, 1fr)); gap: var(--gap-y) var(--gap-x); width: 100%; height: 100%; align-content: center; }
 .product-card { position: relative; z-index: 10; min-width: 0; opacity: 1; transition: opacity 280ms ease; }
 .product-card.is-hidden { visibility: hidden; }
-.product-card__image-wrap { position: relative; aspect-ratio: var(--card-ratio); overflow: hidden; border: 2px solid rgba(255,255,255,.95); border-radius: var(--card-radius); background: rgba(255,255,255,.12); }
+.product-card__image-wrap { position: relative; aspect-ratio: var(--card-ratio); overflow: hidden; border: 4px solid rgba(255,255,255,.98); border-radius: var(--card-radius); background: rgba(255,255,255,.12); }
 .product-card__image, .detail-product img { display: block; width: 100%; height: 100%; object-fit: cover; pointer-events: none; }
-.product-card__price { position: absolute; right: 10px; bottom: 10px; padding: 5px 9px; border-radius: 9px; background: var(--accent); color: var(--background); font-size: clamp(12px, 1.25vw, 22px); font-weight: 700; }
-.product-card__title { margin: 9px 0 0; overflow: hidden; color: var(--text); font-size: clamp(13px, 1.35vw, 25px); font-weight: 300; letter-spacing: .04em; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
-.promo-card { z-index: 10; display: grid; grid-template-columns: 1fr auto; grid-template-rows: 1fr 1fr; align-items: center; padding: 8px 18px; border-radius: var(--card-radius); background: #fff; color: var(--background); font-family: "Arial Narrow", Arial, sans-serif; text-align: center; }
-.promo-card strong { grid-column: 1 / -1; align-self: end; font-size: clamp(15px, 1.75vw, 32px); letter-spacing: -.04em; line-height: .9; }
-.promo-card span { align-self: start; font-size: clamp(11px, 1vw, 18px); font-weight: 700; }
-.promo-card b { align-self: start; font-size: clamp(18px, 1.8vw, 32px); line-height: .8; }
-.scene-dimmer { position: absolute; z-index: 30; inset: 0; background: #102b2d; opacity: 0; pointer-events: none; transition: opacity 500ms ease; }
+.product-card__title { margin: 4px 0 0; overflow: hidden; color: var(--text); font-family: Montserrat, sans-serif; font-size: clamp(13px, 1.35vw, 25px); font-weight: 300; letter-spacing: -.03em; text-align: center; text-overflow: ellipsis; white-space: nowrap; }
+.product-card__price { position: absolute; right: 10px; bottom: 10px; padding: 5px 9px; border-radius: 9px; background: var(--accent); color: var(--background); font-family: Montserrat, sans-serif; font-size: clamp(12px, 1.25vw, 22px); font-weight: 700; }
+.promo-card { z-index: 10; grid-column: span 2; align-self: start; display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 62% 38%; aspect-ratio: 3.1; align-items: center; padding: 8px 26px; border-radius: 32px; background: #fff; color: var(--background); text-align: center; }
+.promo-card strong { grid-column: 1 / -1; align-self: center; color: #fff; font-family: Anton, sans-serif; font-size: clamp(22px, 5.2vw, 100px); font-weight: 400; letter-spacing: -.035em; line-height: .9; -webkit-text-stroke: 12px var(--background); paint-order: stroke fill; transform: translateX(12px) scaleX(1.04); }
+.promo-card span { justify-self: start; align-self: start; margin-left: 40px; color: #fff; font-family: Montserrat, sans-serif; font-size: clamp(11px, 1.5vw, 28px); font-weight: 700; -webkit-text-stroke: 4px var(--background); paint-order: stroke fill; transform: translateY(15px); }
+.promo-card b { justify-self: end; align-self: start; margin-right: 20px; color: #fff; font-family: Montserrat, sans-serif; font-size: clamp(18px, 4vw, 77px); font-weight: 700; line-height: .8; -webkit-text-stroke: 6px var(--background); paint-order: stroke fill; transform: translateY(7px); }
+.scene-dimmer { position: absolute; z-index: 30; inset: 0; background: #dce1e6; opacity: 0; pointer-events: none; transition: opacity 500ms ease; }
 .scene-dimmer.is-visible { opacity: var(--dim-opacity); }
-.detail-overlay { position: absolute; z-index: 40; inset: 0; display: grid; place-items: center; pointer-events: none; }
-.detail-product { position: absolute; width: min(var(--detail-width), 78vw); aspect-ratio: var(--card-ratio); overflow: hidden; border: 3px solid var(--accent); border-radius: 28px; background: var(--background); box-shadow: 0 24px 80px rgba(0,0,0,.28); opacity: 0; transform: translate3d(0,0,0) scale(.96); }
-.detail-product.is-visible { opacity: 1; }
-.detail-copy { position: absolute; z-index: 50; left: 50%; bottom: 8%; width: min(90vw, 1100px); transform: translateX(-50%); opacity: 0; text-align: center; }
+.detail-overlay { position: absolute; z-index: 40; inset: 0; display: flex; justify-content: center; align-items: flex-start; padding-top: 5vh; pointer-events: none; }
+.detail-product { position: relative; flex: none; width: min(var(--detail-width), calc(75vh * var(--card-ratio))); aspect-ratio: var(--card-ratio); padding: 14px; overflow: hidden; border: 4px solid #fff; border-radius: 22px; background: #fff; box-shadow: 0 24px 80px rgba(0,0,0,.08); opacity: 0; transform: translate3d(0,0,0) scale(1); will-change: transform, opacity; }
+.detail-product img { border-radius: 10px; }
+.detail-copy { position: absolute; z-index: 50; left: 50%; top: 0; display: grid; height: clamp(74px, 7.7vw, 148px); width: min(90vw, 1100px); padding: 10px 24px; place-items: center; border-radius: 18px; background: #fff; transform: translateX(-50%); opacity: 0; text-align: center; will-change: opacity; }
 .detail-copy.is-visible { opacity: 1; transition: opacity 350ms ease 160ms; }
-.detail-copy h1 { margin: 0; color: var(--text); font-size: clamp(34px, 5vw, 92px); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
-.detail-copy p { margin: 9px 0 0; color: var(--accent); font-size: clamp(20px, 2.2vw, 42px); }
+.detail-copy h1 { margin: 0; color: #fff; font-family: Anton, sans-serif; font-size: clamp(34px, 5.2vw, 100px); font-weight: 400; letter-spacing: -.025em; line-height: 1; text-transform: uppercase; -webkit-text-stroke: 12px var(--background); paint-order: stroke fill; }
+.detail-copy p { display: none; }
 .status { position: absolute; z-index: 100; inset: auto 20px 12px 20px; color: rgba(255,255,255,.9); font-size: clamp(13px, 1.2vw, 20px); text-align: center; opacity: 0; }
 .status.is-visible { opacity: 1; }
-.brand-logo { position: absolute; z-index: 20; right: 3.2vw; bottom: 1.5vh; max-width: 72px; max-height: 48px; mix-blend-mode: multiply; }
+.brand-logo { position: absolute; z-index: 20; right: 2.3vw; bottom: 1.5vh; width: min(6.25vw, 11vh); height: auto; }
 @media (max-aspect-ratio: 1/1) { #signage { padding-inline: 3vw; } }

@@ -5,7 +5,7 @@
     "textColor": "#ffffff"
   },
   "branding": {
-    "logo": "assets/branding/rodes-logo.png",
+    "logo": "assets/branding/Logo_Rodes Leg.png",
     "showLogo": true,
     "logoPosition": "bottom-right"
   },
@@ -13,19 +13,19 @@
     "columns": 5,
     "gapX": 34,
     "gapY": 22,
-    "cardAspectRatio": 1.55
+    "cardAspectRatio": 1.5
   },
   "animation": {
-    "overviewInitialDurationMs": 2200,
-    "betweenProductsDurationMs": 900,
+    "overviewInitialDurationMs": 3000,
+    "betweenProductsDurationMs": 3000,
     "transitionInDurationMs": 750,
-    "detailDurationMs": 2800,
+    "detailDurationMs": 2500,
     "transitionOutDurationMs": 750,
-    "backgroundOpacityDuringDetail": 0.38,
-    "detailWidthPercent": 58
+    "backgroundOpacityDuringDetail": 0.75,
+    "detailWidthPercent": 63
   },
   "price": {
-    "displayMode": "card",
+    "displayMode": "hidden",
     "defaultPrice": "99 kr.-"
   },
   "promo": {
@@ -35,18 +35,18 @@
     "price": "99 kr.-"
   },
   "products": [
-    { "id": "black-witch", "name": "Black Witch", "price": "99 kr.-", "image": "assets/products/black-witch.jpg", "enabled": true },
-    { "id": "angelic-yellow", "name": "Angelic Yellow", "price": "99 kr.-", "image": "assets/products/angelic-yellow.jpg", "enabled": true },
-    { "id": "black-cat", "name": "Black Cat", "price": "99 kr.-", "image": "assets/products/black-cat.jpg", "enabled": true },
-    { "id": "white-zombie", "name": "White Zombie", "price": "99 kr.-", "image": "assets/products/white-zombie.jpg", "enabled": true },
-    { "id": "spider", "name": "Spider", "price": "99 kr.-", "image": "assets/products/spider.jpg", "enabled": true },
-    { "id": "sharingu-cataclysm", "name": "Sharingu Cataclysm", "price": "99 kr.-", "image": "assets/products/sharingu-cataclysm.jpg", "enabled": true },
-    { "id": "red-devil", "name": "Red Devil", "price": "99 kr.-", "image": "assets/products/red-devil.jpg", "enabled": true },
-    { "id": "metatron", "name": "Metatron", "price": "99 kr.-", "image": "assets/products/metatron.jpg", "enabled": true },
-    { "id": "ice-blue", "name": "Ice Blue", "price": "99 kr.-", "image": "assets/products/ice-blue.jpg", "enabled": true },
-    { "id": "hellraiser", "name": "Hellraiser", "price": "99 kr.-", "image": "assets/products/hellraiser.jpg", "enabled": true },
-    { "id": "angel", "name": "Angel", "price": "99 kr.-", "image": "assets/products/angel.jpg", "enabled": true },
-    { "id": "blind-white", "name": "Blind White", "price": "99 kr.-", "image": "assets/products/blind-white.jpg", "enabled": true },
-    { "id": "bloodshot", "name": "Bloodshot", "price": "99 kr.-", "image": "assets/products/bloodshot.jpg", "enabled": true }
+    { "id": "black-witch", "name": "Black Witch", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-black-witch.webp", "enabled": true },
+    { "id": "angelic-yellow", "name": "Angelic Yellow", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-angelic-yellow.webp", "enabled": true },
+    { "id": "black-cat", "name": "Black Cat", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-black-cat.webp", "enabled": true },
+    { "id": "white-zombie", "name": "White Zombie", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-white-zombie.webp", "enabled": true },
+    { "id": "spider", "name": "Spider", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-spider.webp", "enabled": true },
+    { "id": "sharingu-cataclysm", "name": "Sharigu Cataclysm", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-sharigu-cataclysm.webp", "enabled": true },
+    { "id": "red-devil", "name": "Red Devil", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-red-devil.webp", "enabled": true },
+    { "id": "metatron", "name": "Metatron", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-metatron.webp", "enabled": true },
+    { "id": "ice-blue", "name": "Ice Blue", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-ice-blue.webp", "enabled": true },
+    { "id": "hellraiser", "name": "Hellraiser", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-hellraiser.webp", "enabled": true },
+    { "id": "angel", "name": "Angel", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-engel.webp", "enabled": true },
+    { "id": "blind-white", "name": "Blind White", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-blind-white.webp", "enabled": true },
+    { "id": "bloodshot", "name": "Bloodshot", "price": "99 kr.-", "image": "assets/products/3-monatslinsen-bloodshot.webp", "enabled": true }
   ]
 }
