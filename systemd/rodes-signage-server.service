@@ -1,0 +1,16 @@
+[Unit]
+Description=Rodes Signage local web server
+After=network.target
+
+[Service]
+Type=simple
+User=RODES_USER
+WorkingDirectory=/opt/rodes-signage
+ExecStart=/usr/bin/python3 -m http.server 8080 --bind 127.0.0.1
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
