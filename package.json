@@ -1,0 +1,13 @@
+{
+  "name": "rodes-signage",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "export:setup": "playwright install chromium",
+    "export:mp4": "node scripts/export-video.mjs"
+  },
+  "devDependencies": {
+    "ffmpeg-static": "^5.2.0",
+    "playwright": "^1.55.0"
+  }
+}

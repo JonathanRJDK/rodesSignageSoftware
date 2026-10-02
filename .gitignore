@@ -6,4 +6,6 @@ Desktop.ini
 
 # Temporary preview/export files
 reference-previews/
+exports/
+node_modules/
 
